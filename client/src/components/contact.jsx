@@ -361,8 +361,7 @@ Single Blog
 </span>
 <div class="contact-info">
 <h3>Our Location</h3>
-<p>2767 Sunrise Street, 10th Avenue, New York, USA
-</p>
+<p>Near Samsung Company, Sector 81 Noida, UP.</p>
 </div>
 </div>
 </div>
@@ -385,14 +384,14 @@ Single Blog
 </span>
 <div class="contact-info">
 <h3>Call us</h3>
-<a href="tel:88098787868">+44 587 154765</a>
-<a href="tel:88098787869">+55 576 234532</a>
+<a href="tel:+919319695241">(+91) 9319695241</a>
+
 </div>
 </div>
 </div>
 </div>
 <div class="comp-map pb-100">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8385385572983!2d144.95358331584498!3d-37.81725074201705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sbd!4v1612419490850!5m2!1sen!2sbd"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7009.183915995885!2d77.39335040219089!3d28.551982018691998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef7d41bf32d5%3A0x3f9b363194a323e4!2sSamsung%20India%20Electronics%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1657082764081!5m2!1sen!2sin" ></iframe>
 </div>
 </div>
 <div class="contact-form-area ptb-100 bg-albastor">
