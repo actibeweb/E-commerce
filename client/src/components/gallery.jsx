@@ -81,12 +81,7 @@ export default function Gallery() {
 </div>
 
 
-<div class="switch-theme-mode">
-<label id="switch" class="switch">
-<input type="checkbox" onchange="toggleTheme()" id="slider"/>
-<span class="slider round"></span>
-</label>
-</div>
+
 
 
 <div class="page-wrapper">
@@ -101,9 +96,9 @@ export default function Gallery() {
 <div class="col-lg-8 col-md-12">
 <div class="header-top-left">
 <ul class="contact-info list-style">
-<li><span class="iconify" data-icon="bx:phone-call"></span> <a href="tel:02459271449">(+024) 592 71 449</a></li>
+<li><span class="iconify" data-icon="bx:phone-call"></span> <a href="tel:+919319695241">(+91) 9319695241</a></li>
 <li><Icon icon="ant-design:mail-outlined" /> <a href="/cdn-cgi/l/email-protection#127a777e7e7d5260736a733c717d7f"><span class="__cf_email__" data-cfemail="29414c454546695b485148074a4644">[email&#160;protected]</span></a></li>
-<li><Icon icon="bi:pin-angle" /><p>St. Here Mandalay, New York, U.K</p></li>
+<li><Icon icon="bi:pin-angle" /><p>Near Samsung Company, Sector 81 Noida, UP.</p></li>
 </ul>
 </div>
 </div>
@@ -143,8 +138,9 @@ export default function Gallery() {
 <div class="header-bottom">
 <div class="container">
 <nav class="navbar navbar-expand-md navbar-light">
-<a class="navbar-brand" href="index.html">
-<img class="logo-light" src="assets/img/logo.png" alt="logo"/>
+<a class="navbar-brand" href="/">
+	<h1>ActibePay</h1>
+{/* <img class="logo-light" src="assets/img/logo.png" alt="logo"/> */}
 <img class="logo-dark" src="assets/img/logo-white.png" alt="logo"/>
 </a>
 <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
@@ -526,7 +522,7 @@ Single Blog
 </div>
 <div class="feature-item">
 <span class="feature-icon">
-<i class="flaticon-loan-1"></i>
+<Icon icon="ant-design:bank-outlined" />
 </span>
 <div class="feature-text">
 <h3>Safe &amp; Secure</h3>
@@ -535,7 +531,7 @@ Single Blog
 </div>
 <div class="feature-item">
 <span class="feature-icon">
-<i class="flaticon-computer"></i>
+<Icon icon="clarity:computer-line" />
 </span>
 <div class="feature-text">
 <h3>Live Support</h3>
@@ -602,7 +598,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<i class="flaticon-payment-method"></i>
+<Icon icon="fluent:payment-16-regular" />
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Mobile Banking</a></h3>
@@ -613,7 +609,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<i class="flaticon-computer"></i>
+<Icon icon="clarity:computer-line" />
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Secure Payment</a></h3>
@@ -624,7 +620,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<i class="flaticon-credit-card"></i>
+<Icon icon="ant-design:credit-card-outlined" />
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Saving Account</a></h3>
@@ -635,7 +631,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<i class="flaticon-loan-1"></i>
+<Icon icon="ant-design:bank-outlined" />
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Personal Savings</a></h3>
@@ -905,8 +901,10 @@ Single Blog
 <div class="row pt-100 pb-75">
 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 <div class="footer-widget">
-<a href="index.html" class="footer-logo">
-<img src="assets/img/logo-white.png" alt="Image"/>
+<a href="/" class="footer-logo">
+{/* <img src="assets/img/logo-white.png" alt="Image"/>
+ */}
+ <h1 class='text-white'>ActibePay</h1>
 </a>
 <p class="comp-desc">
 On the other hand, we denounce whteous indig nation and dislike men wh beguiled moraized er hand consec teturus adipis iscing elit eiusmod tempordunt labore dolore magna aliqua consector tetur adip iscing.
@@ -1036,7 +1034,7 @@ Affiliate Program
 </div>
 </div>
 <div class="copyright-text">
-<p> <Icon icon="ant-design:copyright-circle-filled" /><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Raxa. All Rights Reserved By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+<p> <Icon icon="ant-design:copyright-circle-filled" /><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> ActibePay. All Rights Reserved By <a href="/" target="_blank">2022</a></p>
 </div>
 </footer>
 
