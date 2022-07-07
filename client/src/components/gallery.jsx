@@ -1,7 +1,12 @@
 // import axios from "axios";
 import { React,useState } from "react";
 import { Icon } from '@iconify/react';
-
+import {AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
+ import {BsFillCreditCard2BackFill ,BsPinterest, BsFacebook,BsCheckAll, BsFillPlayBtnFill , BsFillFileBarGraphFill}  from 'react-icons/bs';
+import {FiMapPin} from 'react-icons/fi';
+import {ImCross} from 'react-icons/im';
+import {HiOutlineDesktopComputer} from 'react-icons/hi';
+import {MdPayment} from 'react-icons/md';
 // import "./gallery.css";
 
 // export function Gallery() {
@@ -96,9 +101,9 @@ export default function Gallery() {
 <div class="col-lg-8 col-md-12">
 <div class="header-top-left">
 <ul class="contact-info list-style">
-<li><span class="iconify" data-icon="bx:phone-call"></span> <a href="tel:+919319695241">(+91) 9319695241</a></li>
-<li><Icon icon="ant-design:mail-outlined" /> <a href="/cdn-cgi/l/email-protection#127a777e7e7d5260736a733c717d7f"><span class="__cf_email__" data-cfemail="29414c454546695b485148074a4644">[email&#160;protected]</span></a></li>
-<li><Icon icon="bi:pin-angle" /><p>Near Samsung Company, Sector 81 Noida, UP.</p></li>
+<li><i><AiFillPhone/></i> <a href="tel:+919319695241">(+91) 9319695241</a></li>
+<li><i><AiFillMail /></i><a href="/cdn-cgi/l/email-protection#127a777e7e7d5260736a733c717d7f"><span class="__cf_email__" data-cfemail="29414c454546695b485148074a4644">[email&#160;protected]</span></a></li>
+<li><i><FiMapPin/></i><p>Near Samsung Company, Sector 81 Noida, UP.</p></li>
 </ul>
 </div>
 </div>
@@ -109,7 +114,7 @@ export default function Gallery() {
 <li><a href="contact.html">Help</a></li>
 </ul>
 <div class="select-lang">
-<Icon icon="ant-design:global-outlined" />
+<i><AiOutlineGlobal /></i>
 <div class="navbar-option-item navbar-language dropdown language-option">
 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <span class="lang-name"></span>
@@ -145,7 +150,7 @@ export default function Gallery() {
 </a>
 <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
 <div class="menu-close xl-none">
-<a href="javascript:void(0)"> <Icon icon="akar-icons:cross" /></a>
+<a href="javascript:void(0)"> <i><ImCross /></i></a>
 </div>
 <ul class="navbar-nav ms-auto">
 <li class="nav-item  has-dropdown">
@@ -296,7 +301,8 @@ Single Blog
 </nav>
 <div class="mobile-bar-wrap">
 <div class="mobile-sidebar">
-<i class="ri-menu-4-line"></i>
+<i class=""> <AiOutlineMenu /></i>
+  
 </div>
 <button class="searchbtn xl-none" type="button">
 <i class="flaticon-search"></i>
@@ -339,7 +345,7 @@ Single Blog
 <div class="hero-btn">
 <a href="service-one.html" class="btn style1">Get Started</a>
 <a class="play-video" data-fancybox href="https://www.youtube.com/watch?v=DGo-OhDWIKQ">
-<span class="play-btn"> <i class="flaticon-play-button-arrowhead"></i></span>
+<span class="play-btn"> <i class=""><BsFillPlayBtnFill /></i></span>
 <span class="sm-none">Watch Video</span>
 </a>
 </div>
@@ -366,7 +372,7 @@ Single Blog
 <div class="hero-btn">
 <a href="service-one.html" class="btn style1">Get Started</a>
 <a class="play-video" data-fancybox href="https://www.youtube.com/watch?v=DGo-OhDWIKQ">
-<span class="play-btn"> <i class="flaticon-play-button-arrowhead"></i></span>
+<span class="play-btn"> <i class=""><BsFillPlayBtnFill /></i></span>
 <span class="sm-none">Watch Video</span>
 </a>
 </div>
@@ -513,7 +519,7 @@ Single Blog
 <div class="feature-item-wrap">
 <div class="feature-item">
 <span class="feature-icon">
-<i class="flaticon-graph"></i>
+<i class=""><BsFillFileBarGraphFill /></i>
 </span>
 <div class="feature-text">
 <h3>Low Costing</h3>
@@ -522,7 +528,7 @@ Single Blog
 </div>
 <div class="feature-item">
 <span class="feature-icon">
-<Icon icon="ant-design:bank-outlined" />
+<i><AiFillBank /></i>
 </span>
 <div class="feature-text">
 <h3>Safe &amp; Secure</h3>
@@ -531,7 +537,7 @@ Single Blog
 </div>
 <div class="feature-item">
 <span class="feature-icon">
-<Icon icon="clarity:computer-line" />
+<i><HiOutlineDesktopComputer /></i>
 </span>
 <div class="feature-text">
 <h3>Live Support</h3>
@@ -598,7 +604,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<Icon icon="fluent:payment-16-regular" />
+<i><MdPayment /></i>
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Mobile Banking</a></h3>
@@ -609,7 +615,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<Icon icon="clarity:computer-line" />
+<i><HiOutlineDesktopComputer/></i>
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Secure Payment</a></h3>
@@ -620,7 +626,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<Icon icon="ant-design:credit-card-outlined" />
+<i class=""><BsFillCreditCard2BackFill /></i>
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Saving Account</a></h3>
@@ -631,7 +637,7 @@ Single Blog
 <div class="col-md-6">
 <div class="service-card style3">
 <span class="service-icon">
-<Icon icon="ant-design:bank-outlined" />
+<i><AiFillBank /></i>
 </span>
 <div class="service-info">
 <h3><a href="service-details.html">Personal Savings</a></h3>
@@ -660,9 +666,9 @@ Single Blog
 <p>There are many variations of passages of Lorem Ipsum amet avoilble but majority have suffered alteration in some form, by injected humur or randomise words which don't sure amet sit dolor quras alto lorem.</p>
 </div>
 <ul class="content-feature-list list-style">
-<li><i class="ri-check-double-line"></i>Cards that work all across the world.</li>
-<li><i class="ri-check-double-line"></i>Highest Returns on your investments.</li>
-<li><i class="ri-check-double-line"></i>No ATM fees. No minimum balance. No overdrafts.</li>
+<li><i><BsCheckAll /> </i>Cards that work all across the world.</li>
+<li><i><BsCheckAll /> </i>Highest Returns on your investments.</li>
+<li><i><BsCheckAll /> </i>No ATM fees. No minimum balance. No overdrafts.</li>
 </ul>
 <a href="register.html" class="btn style1">Signup Today</a>
 </div>
@@ -819,10 +825,10 @@ Single Blog
 <p>There are many variations of passages of Lorem Ipsum amet avoilble but majority have suffered alteration in some form, by injected humur or randomise words which don't sure amet sit dolor quras alto lorem.</p>
 </div>
 <ul class="content-feature-list style1 list-style">
-<li><span><i class="flaticon-tick"></i></span>Learn To Budget</li>
-<li><span><i class="flaticon-tick"></i></span>Create An Emergency Fund</li>
-<li><span><i class="flaticon-tick"></i></span>Get Out Of Debt</li>
-<li><span><i class="flaticon-tick"></i></span>Save And Invest Your Money</li>
+<li><span><i><AiFillCheckCircle /> </i></span>Learn To Budget</li>
+<li><span><i><AiFillCheckCircle /> </i></span>Create An Emergency Fund</li>
+<li><span><i><AiFillCheckCircle /> </i></span>Get Out Of Debt</li>
+<li><span><i><AiFillCheckCircle /> </i></span>Save And Invest Your Money</li>
 </ul>
 </div>
 </div>
@@ -913,22 +919,22 @@ On the other hand, we denounce whteous indig nation and dislike men wh beguiled 
 <ul class="social-profile list-style style1">
 <li>
 <a target="_blank" href="https://facebook.com">
-<Icon icon="akar-icons:facebook-fill" />
+<i><BsFacebook/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://twitter.com">
-<Icon icon="akar-icons:twitter-fill" />
+<i><AiFillTwitterCircle/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://linkedin.com">
-<Icon icon="akar-icons:linkedin-box-fill" />
+<i><AiFillLinkedin/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://instagram.com">
-<Icon icon="akar-icons:pinterest-fill" />
+<i><BsPinterest/></i>
 </a>
 </li>
 </ul>

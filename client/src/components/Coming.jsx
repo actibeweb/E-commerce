@@ -1,5 +1,11 @@
 // import axios from "axios";
 import { React,useState } from "react";
+import {AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
+ import {BsFillCreditCard2BackFill ,BsPinterest, BsFacebook,BsCheckAll, BsFillPlayBtnFill , BsFillFileBarGraphFill}  from 'react-icons/bs';
+import {FiMapPin} from 'react-icons/fi';
+import {ImCross} from 'react-icons/im';
+import {HiOutlineDesktopComputer} from 'react-icons/hi';
+import {MdPayment} from 'react-icons/md';
 import { Icon } from '@iconify/react';
 // import "./gallery.css";
 
@@ -82,7 +88,6 @@ export default function Gallery() {
 
 
 <div class="page-wrapper">
-
 <header class="header-wrap style1">
 <div class="header-top">
 <button type="button" class="close-sidebar">
@@ -93,9 +98,9 @@ export default function Gallery() {
 <div class="col-lg-8 col-md-12">
 <div class="header-top-left">
 <ul class="contact-info list-style">
-<li><span class="iconify" data-icon="bx:phone-call"></span> <a href="tel:+919319695241">(+91) 9319695241</a></li>
-<li><Icon icon="ant-design:mail-outlined" /> <a href="/cdn-cgi/l/email-protection#127a777e7e7d5260736a733c717d7f"><span class="__cf_email__" data-cfemail="29414c454546695b485148074a4644">[email&#160;protected]</span></a></li>
-<li><Icon icon="bi:pin-angle" /><p>Near Samsung Company, Sector 81 Noida, UP.</p></li>
+<li><i><AiFillPhone/></i> <a href="tel:+919319695241">(+91) 9319695241</a></li>
+<li><i><AiFillMail /></i><a href="/cdn-cgi/l/email-protection#127a777e7e7d5260736a733c717d7f"><span class="__cf_email__" data-cfemail="29414c454546695b485148074a4644">[email&#160;protected]</span></a></li>
+<li><i><FiMapPin/></i><p>Near Samsung Company, Sector 81 Noida, UP.</p></li>
 </ul>
 </div>
 </div>
@@ -106,7 +111,7 @@ export default function Gallery() {
 <li><a href="contact.html">Help</a></li>
 </ul>
 <div class="select-lang">
-<Icon icon="ant-design:global-outlined" />
+<i><AiOutlineGlobal /></i>
 <div class="navbar-option-item navbar-language dropdown language-option">
 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <span class="lang-name"></span>
@@ -142,7 +147,7 @@ export default function Gallery() {
 </a>
 <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
 <div class="menu-close xl-none">
-<a href="javascript:void(0)"> <Icon icon="akar-icons:cross" /></a>
+<a href="javascript:void(0)"> <i><ImCross /></i></a>
 </div>
 <ul class="navbar-nav ms-auto">
 <li class="nav-item  has-dropdown">
@@ -293,7 +298,8 @@ Single Blog
 </nav>
 <div class="mobile-bar-wrap">
 <div class="mobile-sidebar">
-<i class="ri-menu-4-line"></i>
+<i class=""> <AiOutlineMenu /></i>
+  
 </div>
 <button class="searchbtn xl-none" type="button">
 <i class="flaticon-search"></i>
@@ -338,7 +344,6 @@ Single Blog
 
 </div>
 
-
 <footer class="footer-wrap bg-rock">
 <div class="container">
 <img src="assets/img/footer-shape-1.png" alt="Image" class="footer-shape-one"/>
@@ -358,22 +363,22 @@ On the other hand, we denounce whteous indig nation and dislike men wh beguiled 
 <ul class="social-profile list-style style1">
 <li>
 <a target="_blank" href="https://facebook.com">
-<Icon icon="akar-icons:facebook-fill" />
+<i><BsFacebook/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://twitter.com">
-<Icon icon="akar-icons:twitter-fill" />
+<i><AiFillTwitterCircle/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://linkedin.com">
-<Icon icon="akar-icons:linkedin-box-fill" />
+<i><AiFillLinkedin/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://instagram.com">
-<Icon icon="akar-icons:pinterest-fill" />
+<i><BsPinterest/></i>
 </a>
 </li>
 </ul>
@@ -482,6 +487,7 @@ Affiliate Program
 <p> <Icon icon="ant-design:copyright-circle-filled" /><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> ActibePay. All Rights Reserved By <a href="/" target="_blank">2022</a></p>
 </div>
 </footer>
+
 
 </div>
 

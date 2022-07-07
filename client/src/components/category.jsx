@@ -1,11 +1,20 @@
-
+import { useForm, Controller } from 'react-hook-form';
 
 import axios from "axios";
 import { useState } from "react";
 import "../App.css";
 import { Icon } from '@iconify/react';
+import {AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
+ import {BsFillCreditCard2BackFill ,BsPinterest, BsFacebook,BsCheckAll, BsFillPlayBtnFill , BsFillFileBarGraphFill}  from 'react-icons/bs';
+import {FiMapPin} from 'react-icons/fi';
+import {ImCross} from 'react-icons/im';
+import {HiOutlineDesktopComputer} from 'react-icons/hi';
+import {MdPayment} from 'react-icons/md';
+import { Form, Label } from 'semantic-ui-react';
+import './style1.css';
+import {useRef} from 'react';
 
-
+import './style.css';
 // // import axios from "axios";
 // import { React,useState } from "react";
 
@@ -554,13 +563,18 @@ import { Icon } from '@iconify/react';
 
 
 function App() {
+
+	var integer;
+	const [message, setMessage] = useState('');
 	const [book, setBook] = useState({
 		name: "The Fault In Our Stars",
 		author: "John Green",
 		img: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
-		price: 250,
+		price: 100,
+		
 	});
-
+	
+	
 	const initPayment = (data) => {
 		const options = {
 			key: "rzp_live_PhxpygeEYYizo1",
@@ -583,29 +597,50 @@ function App() {
 				color: "#3399cc",
 			},
 		};
+		console.log(data.integer);
 		const rzp1 = new window.Razorpay(options);
 		rzp1.open();
 	};
-
+	const handleChange = event => {
+		setMessage(event.target.value);}
+		const handleClick = event => {
+			event.preventDefault();
+		
+			// 👇️ value of input field
+			console.log( message);
+			 
+		console.log(integer+1);
+			// 👇️ set value of input field
+			setMessage('New value');
+		  };
+		
+	// console.log('value is:', event.target.value);
+	
 	const handlePayment = async () => {
 		try {
+			var message_parse = parseInt(message);
+			console.log(message_parse);
 			const orderUrl = "http://localhost:8080/api/payment/orders";
-			const { data } = await axios.post(orderUrl, { amount: book.price });
+			const { data } = await axios.post(orderUrl, { amount: message_parse});
 			console.log(data);
 			initPayment(data.data);
 		} catch (error) {
 			console.log(error);
 		}
+		
 	};
+	
 
 	return (
 		<>
+
 
 <div class="loader js-preloader">
 <div></div>
 <div></div>
 <div></div>
 </div>
+
 
 
 
@@ -623,9 +658,9 @@ function App() {
 <div class="col-lg-8 col-md-12">
 <div class="header-top-left">
 <ul class="contact-info list-style">
-<li><span class="iconify" data-icon="bx:phone-call"></span> <a href="tel:+919319695241">(+91) 9319695241</a></li>
-<li><Icon icon="ant-design:mail-outlined" /> <a href="/cdn-cgi/l/email-protection#127a777e7e7d5260736a733c717d7f"><span class="__cf_email__" data-cfemail="29414c454546695b485148074a4644">[email&#160;protected]</span></a></li>
-<li><Icon icon="bi:pin-angle" /><p>Near Samsung Company, Sector 81 Noida, UP.</p></li>
+<li><i><AiFillPhone/></i> <a href="tel:+919319695241">(+91) 9319695241</a></li>
+<li><i><AiFillMail /></i><a href="/cdn-cgi/l/email-protection#127a777e7e7d5260736a733c717d7f"><span class="__cf_email__" data-cfemail="29414c454546695b485148074a4644">[email&#160;protected]</span></a></li>
+<li><i><FiMapPin/></i><p>Near Samsung Company, Sector 81 Noida, UP.</p></li>
 </ul>
 </div>
 </div>
@@ -636,7 +671,7 @@ function App() {
 <li><a href="contact.html">Help</a></li>
 </ul>
 <div class="select-lang">
-<Icon icon="ant-design:global-outlined" />
+<i><AiOutlineGlobal /></i>
 <div class="navbar-option-item navbar-language dropdown language-option">
 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <span class="lang-name"></span>
@@ -672,7 +707,7 @@ function App() {
 </a>
 <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
 <div class="menu-close xl-none">
-<a href="javascript:void(0)"> <Icon icon="akar-icons:cross" /></a>
+<a href="javascript:void(0)"> <i><ImCross /></i></a>
 </div>
 <ul class="navbar-nav ms-auto">
 <li class="nav-item  has-dropdown">
@@ -823,7 +858,8 @@ Single Blog
 </nav>
 <div class="mobile-bar-wrap">
 <div class="mobile-sidebar">
-<i class="ri-menu-4-line"></i>
+<i class=""> <AiOutlineMenu /></i>
+  
 </div>
 <button class="searchbtn xl-none" type="button">
 <i class="flaticon-search"></i>
@@ -855,8 +891,7 @@ Single Blog
 
 
 
-
-		<div className="App_1">
+		{/* <div className="App_1">
 			<div className="book_container">
 				<img src={book.img} alt="book_img" className="book_img" />
 				<p className="book_name">{book.name}</p>
@@ -868,8 +903,110 @@ Single Blog
 					buy now
 				</button>
 			</div>
+		</div> */}
+
+<div>
+                 <section className="pt-3 pb-3 page-info section-padding border-bottom bg-white single-product-header-bk ">
+          
+										 
+<h2> Checkout Form</h2>
+{/* <p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p> */}
+<div class="row1">
+  <div class="col-75">
+    <div class="container1">
+      <form >
+      
+        <div class="row1">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe"/>
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com"/>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"/>
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York"/>
+
+            <div class="row1">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY"/>
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container1">
+              <i class="fa fa-cc-visa" ></i>
+              <i class="fa fa-cc-amex" ></i>
+              <i class="fa fa-cc-mastercard" ></i>
+              <i class="fa fa-cc-discover" ></i>
+            </div>
+			<label for="cname">Amount</label>
+			<input
+        type="text"
+		// ref={inputRef}
+        id="message"
+        name="message"
+		placeholder="Amount"
+        onChange={handleChange}
+        value={message}
+      />
+
+            
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"/> Shipping address same as billing
+        </label>
+        
+      </form> 
+	  <button  onClick={handlePayment} className="btn1">
+					buy now
+				</button>
+				{/* <button  onClick={handleClick} className="btn1">
+					buy now
+				</button> */}
+				{/* <input type="submit" onClick={handlePayment} value="Continue to checkout" class="btn1"/> */}
+	  {/* <div className="App_1">
+			<div className="book_container">
+				<img src={book.img} alt="book_img" className="book_img" />
+				<p className="book_name">{book.name}</p>
+				<p className="book_author">By {book.author}</p>
+				<p className="book_price">
+					Price : <span>&#x20B9; {book.price}</span>
+				</p>
+				<button onClick={handlePayment} className="buy_btn">
+					buy now
+				</button>
+			</div>
+		</div> */}
+    </div>
+  </div>
+  
+</div>
+
+                </section> 
+				
+				
+
+
+
+            </div>
 		</div>
-		</div>
+
+
+
+
+		
 
 		<footer class="footer-wrap bg-rock">
 <div class="container">
@@ -890,22 +1027,22 @@ On the other hand, we denounce whteous indig nation and dislike men wh beguiled 
 <ul class="social-profile list-style style1">
 <li>
 <a target="_blank" href="https://facebook.com">
-<Icon icon="akar-icons:facebook-fill" />
+<i><BsFacebook/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://twitter.com">
-<Icon icon="akar-icons:twitter-fill" />
+<i><AiFillTwitterCircle/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://linkedin.com">
-<Icon icon="akar-icons:linkedin-box-fill" />
+<i><AiFillLinkedin/></i>
 </a>
 </li>
 <li>
 <a target="_blank" href="https://instagram.com">
-<Icon icon="akar-icons:pinterest-fill" />
+<i><BsPinterest/></i>
 </a>
 </li>
 </ul>
@@ -1014,6 +1151,7 @@ Affiliate Program
 <p> <Icon icon="ant-design:copyright-circle-filled" /><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> ActibePay. All Rights Reserved By <a href="/" target="_blank">2022</a></p>
 </div>
 </footer>
+
 		</>
 	);
 }
